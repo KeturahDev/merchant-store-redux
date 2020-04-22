@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 function CategoryList(props){
   return(
     <React.Fragment>
-      {props.categories.map(category => <Category name={category.categoryName} id={category.id}/>)}
+      {props.categories.map(category => <Category name={category.name} id={category.id}/>)}
     </React.Fragment>
   );
 }
