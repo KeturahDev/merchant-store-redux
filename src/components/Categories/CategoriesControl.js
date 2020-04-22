@@ -1,28 +1,9 @@
 import React from "react";
 import CategoryList from "./CategoryList";
 import CategoryForm from "./CategoryForm";
-import {v4} from 'uuid';
+// import {v4} from 'uuid';
+import masterCategoriesList from './../data/masterCategoriesList';
 
-const masterCategoriesList = [{
-  name: "shoes",
-  id: v4()
-},
-{
-  name: "tops",
-  id: v4()
-},
-{
-  name: "jeans",
-  id: v4()
-},
-{
-  name: "dresses",
-  id: v4()
-},
-{
-  name: "hats",
-  id: v4()
-}]
 
 class CategoriesControl extends React.Component {
   constructor(props){
@@ -71,99 +52,3 @@ class CategoriesControl extends React.Component {
   
   export default CategoriesControl;
 
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-  // state = {
-  //   categoryName: masterList[masterList.categoryKey].categoryName, //[0]?
-  //   itemList: masterList[0].categorySelection
-  // }
-  
-  // mastrList = [
-    //   // {
-      //     categoryName: shoes,
-      //     categorySelection: [
-        //       {
-          //         name: "stilehto",
-          //         description: "might kill u",
-                    //         quantity: 1,
-                    //         // category: "shoes"
-                    //       }
-                    //   //   ]
-                    //   // }
-                    // ]
