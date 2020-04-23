@@ -47,15 +47,17 @@ class ItemControl extends React.Component{
   }
 
   setVisibility = () => {
-    if(this.state.formVisible) {
-      return {
-      component: <ItemForm onItemCreation={this.handleNewItemSubmission}/>,
-      buttonText: "Back to Items"
-      }
-    } else {
-      return {
-      component: <ItemList items={this.state.itemList} onBuyItem={this.handleBuyingItem} onRestockItem={this.handleRestockingItem} onDeletingItem={this.handleDeletingItem}/>,
-      buttonText: "Add new Item"
+    if (this.state.itemList != null) {
+      if(this.state.formVisible) {
+        return {
+        component: <ItemForm onItemCreation={this.handleNewItemSubmission}/>,
+        buttonText: "Back to Items"
+        }
+      } else {
+        return {
+        component: <ItemList items={this.state.itemList} onBuyItem={this.handleBuyingItem} onRestockItem={this.handleRestockingItem} onDeletingItem={this.handleDeletingItem}/>,
+        buttonText: "Add new Item"
+        }
       }
     }
   }

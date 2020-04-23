@@ -9,9 +9,11 @@ const catBoxStyle= {
 }
 
 function Category(props) {
+  const { deleteCategory } = props;
   return (
     <React.Fragment>
       <h3>{props.name}</h3>
+      <button onClick={() => deleteCategory(props.id)}>Delete Category</button>
       <div className="row" style={catBoxStyle}>
         <ItemControl list={props.itemsList}/> 
       </div>
@@ -21,8 +23,9 @@ function Category(props) {
 
 Category.propTypes = {
   name: PropTypes.string,
-  id: PropTypes.number,
-  itemsList: PropTypes.arrayOf(PropTypes.object)
+  id: PropTypes.string,
+  itemsList: PropTypes.arrayOf(PropTypes.object),
+  deleteCategory: PropTypes.func
 }
 
 export default Category;

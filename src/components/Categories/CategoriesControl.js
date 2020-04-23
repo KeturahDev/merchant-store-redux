@@ -25,6 +25,11 @@ class CategoriesControl extends React.Component {
     this.setState({categories: newCategories, formVisible: false})
   }
 
+  handleDeletingCategory = (id) => {
+    const newMasterCategoriesList = this.state.categories.filter(category => category.id !== id);
+    this.setState({categories: newMasterCategoriesList})
+  }
+
   setVisibility = () => {
     if (this.state.formVisible) {
       return {
@@ -34,7 +39,7 @@ class CategoriesControl extends React.Component {
     } else {
       return {
         buttonText: "Add Category",
-        component: <CategoryList categories={this.state.categories}/>
+        component: <CategoryList onDelete={this.handleDeletingCategory} categories={this.state.categories}/>
       }
     }
   }
