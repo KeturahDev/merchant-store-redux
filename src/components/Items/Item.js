@@ -1,5 +1,5 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 const itemBoxStyle = {
   border: "2px solid orange",
@@ -8,7 +8,7 @@ const itemBoxStyle = {
 }
 
 function Item(props) {
-  const {buyItem} = props;
+  const {buyItem, restockItem} = props;
   return (
     <React.Fragment>
       <div style={itemBoxStyle} className="col-md-3">
@@ -18,7 +18,7 @@ function Item(props) {
         <p>Quantity: {props.quantity}</p>
         <div className="buttons">
           <button onClick={() => buyItem(props.id)}>buy</button>
-          <button onClick={props.restockItem}>restock</button>
+          <button onClick={() => restockItem(props.id)}>restock</button>
           <button>delete</button>
           {/* <p>buy---restock--delete</p> */}
         </div>
@@ -26,6 +26,11 @@ function Item(props) {
       {/* <hr/> */}
     </React.Fragment>
   );
+}
+
+Item.propTypes ={
+  buyItem: PropTypes.func,
+  restockItem: PropTypes.func
 }
 
 export default Item;
