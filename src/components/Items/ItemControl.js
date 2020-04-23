@@ -7,15 +7,26 @@ class ItemControl extends React.Component{
   constructor(props){
     super(props)
     this.state = {
-      formVisiible: false,
+      formVisible: false,
       itemList: props.list
     }
   }
 
+  handleClick = () => {
+    this.setState(prevState => ({
+      formVisible: !prevState.formVisible
+    }));
+  }
+  
+  handleNewItemSubmission = (newItem) => {
+    const newItemList = this.state.itemList.concat(newItem);
+    this.setState({itemList: newItemList, formVisible: false})
+  }
+
   setVisibility = () => {
-    if(this.state.formVisiible) {
+    if(this.state.formVisible) {
       return {
-      component: <ItemForm/>,
+      component: <ItemForm onItemCreation={this.handleNewItemSubmission}/>,
       buttonText: "Back to Items"
       }
     } else {

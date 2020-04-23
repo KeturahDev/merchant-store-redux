@@ -2,14 +2,19 @@ import React from 'react';
 import PropTypes from "prop-types";
 import ItemControl from "./../Items/ItemControl"
 
+const catBoxStyle= {
+  border: "2px solid blue",
+  padding: "3%",
+  backgroundColor: "#e1eaf7"
+}
+
 function Category(props) {
   return (
     <React.Fragment>
-      <h3>{props.name}</h3>
-      <p><em>add item</em></p>
-      <ItemControl list={props.itemsList}/> 
-      <p>Where we will show our items</p>
-      <hr/>
+      <div className="row" style={catBoxStyle}>
+        <h3>{props.name}</h3>
+        <ItemControl list={props.itemsList}/> 
+      </div>
     </React.Fragment>
   )
 }

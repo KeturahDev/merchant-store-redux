@@ -6,19 +6,19 @@ const masterCategoriesList = [{
   id: v4(),
   items: [
     {
-      name: "Everyday Sneakers",
+      itemName: "Everyday Sneakers",
       description: "so comfy oooo",
       quantity: 10,
       id: v4()
     },
     {
-      name: "Work Flats",
+      itemName: "Work Flats",
       description: "great for the office, matches anything",
       quantity: 6,
       id: v4()
     },
     {
-      name: "a",
+      itemName: "a",
       description: "b",
       quantity: 1,
       id: v4()
@@ -30,8 +30,8 @@ const masterCategoriesList = [{
   id: v4(),
   items: [
     {
-      name: "a",
-      description: "b",
+      itemName: "longsleeve T",
+      description: "comfy and casual",
       quantity: 1,
       id: v4()
     }
@@ -42,8 +42,8 @@ const masterCategoriesList = [{
   id: v4(),
   items: [
     {
-      name: "a",
-      description: "b",
+      itemName: "straight cut",
+      description: "blue straight cut, goes with anything",
       quantity: 1,
       id: v4()
     }
@@ -54,9 +54,9 @@ const masterCategoriesList = [{
   id: v4(),
   items: [
     {
-      name: "a",
-      description: "b",
-      quantity: 1,
+      itemName: "sundress",
+      description: "long and comfy, goes with anything",
+      quantity: 5,
       id: v4()
     }
   ]
@@ -66,8 +66,8 @@ const masterCategoriesList = [{
   id: v4(),
   items: [
     {
-      name: "a",
-      description: "b",
+      itemName: "sunhat",
+      description: "wide baige and handmade",
       quantity: 1,
       id: v4()
     }

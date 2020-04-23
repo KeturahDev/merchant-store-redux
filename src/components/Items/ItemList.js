@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function ItemList(props) {
   return (
     <React.Fragment> 
-       {props.items.map(item => <Item name={item.name} id={item.id}/>)} 
+       {props.items.map(item => <Item name={item.itemName} id={item.id} quantity={item.quantity}/>)} 
     </React.Fragment> 
   );
 }
