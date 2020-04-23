@@ -11,8 +11,8 @@ const catBoxStyle= {
 function Category(props) {
   return (
     <React.Fragment>
+      <h3>{props.name}</h3>
       <div className="row" style={catBoxStyle}>
-        <h3>{props.name}</h3>
         <ItemControl list={props.itemsList}/> 
       </div>
     </React.Fragment>

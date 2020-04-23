@@ -12,6 +12,15 @@ class ItemControl extends React.Component{
     }
   }
 
+  handleBuyingItem = (id) => {
+    const selectedItem = this.state.itemList.filter(item => item.id === id)[0];
+    const newItemInfo = selectedItem.quantity -1;
+    const removingOldItem = this.state.itemList.filter(item => item.id !== id)
+    const newItem = {...selectedItem, quantity: newItemInfo}
+    const newItemList = removingOldItem.concat(newItem)
+    this.setState({ itemList: newItemList})
+  }
+
   handleClick = () => {
     this.setState(prevState => ({
       formVisible: !prevState.formVisible
@@ -31,7 +40,7 @@ class ItemControl extends React.Component{
       }
     } else {
       return {
-      component: <ItemList items={this.state.itemList}/>,
+      component: <ItemList items={this.state.itemList} onBuyItem={this.handleBuyingItem}/>,
       buttonText: "Add new Item"
       }
     }

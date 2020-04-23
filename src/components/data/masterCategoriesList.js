@@ -18,8 +18,8 @@ const masterCategoriesList = [{
       id: v4()
     },
     {
-      itemName: "a",
-      description: "b",
+      itemName: "heels",
+      description: "ouch",
       quantity: 1,
       id: v4()
     }
