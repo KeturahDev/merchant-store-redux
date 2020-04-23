@@ -11,6 +11,11 @@ class ItemControl extends React.Component{
       itemList: props.list
     }
   }
+  
+  handleDeletingItem = (id) => {
+    const newItemList = this.state.itemList.filter(item => item.id !== id);
+    this.setState({itemList: newItemList});
+  }
 
   handleBuyingItem = (id) => {
     const selectedItem = this.state.itemList.filter(item => item.id === id)[0];
@@ -49,7 +54,7 @@ class ItemControl extends React.Component{
       }
     } else {
       return {
-      component: <ItemList items={this.state.itemList} onBuyItem={this.handleBuyingItem} onRestockItem={this.handleRestockingItem}/>,
+      component: <ItemList items={this.state.itemList} onBuyItem={this.handleBuyingItem} onRestockItem={this.handleRestockingItem} onDeletingItem={this.handleDeletingItem}/>,
       buttonText: "Add new Item"
       }
     }

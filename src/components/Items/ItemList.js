@@ -3,7 +3,7 @@ import Item from './Item';
 import PropTypes from 'prop-types';
 
 function ItemList(props) {
-  const {items, onBuyItem, onRestockItem} = props
+  const {items, onBuyItem, onRestockItem, onDeletingItem} = props
   return (
     <React.Fragment> 
        {items.map(item => 
@@ -13,7 +13,8 @@ function ItemList(props) {
           id={item.id} 
           quantity={item.quantity}
           buyItem={onBuyItem}
-          restockItem={onRestockItem}/>)} 
+          restockItem={onRestockItem}
+          deleteItem={onDeletingItem}/>)} 
     </React.Fragment> 
   );
 }

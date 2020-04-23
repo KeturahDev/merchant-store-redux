@@ -8,7 +8,7 @@ const itemBoxStyle = {
 }
 
 function Item(props) {
-  const {buyItem, restockItem} = props;
+  const {buyItem, restockItem, deleteItem} = props;
   return (
     <React.Fragment>
       <div style={itemBoxStyle} className="col-md-3">
@@ -18,13 +18,13 @@ function Item(props) {
         <p>Quantity: {props.quantity}</p>
         <div className="buttons">
         { props.quantity <= 0 &&
-            <p>sorry, item is unailable for purchase</p>}
-        
+            <p>sorry, item is unailable for purchase</p>
+        }
         { props.quantity > 0 &&
           <button onClick={() => buyItem(props.id)}>buy</button>
         }
           <button onClick={() => restockItem(props.id)}>restock</button>
-          <button>delete</button>
+          <button onClick={() => deleteItem(props.id)}>delete</button>
           {/* <p>buy---restock--delete</p> */}
         </div>
       </div>
@@ -35,7 +35,8 @@ function Item(props) {
 
 Item.propTypes ={
   buyItem: PropTypes.func,
-  restockItem: PropTypes.func
+  restockItem: PropTypes.func,
+  deleteItem: PropTypes.func
 }
 
 export default Item;
