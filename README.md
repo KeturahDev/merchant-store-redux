@@ -43,14 +43,9 @@ _Download Manually:_
 * Click green "Clone or Download" button.
 * Click "Download ZIP".
 * Click downloaded file to unzip.
-* Open folder called "galactic-age-calculator".
-* Right click "index.html" and select your preferred browser or text editor.
+* Navigate to folder called "react-merchent-store" in terminal.
+* Run "npm start" to auto start a local instance in your browser at http://localhost:3000/.
 
-## Future Additions
-
-* Add planet images.
-* Add planet informational details.
-* Add functionality for Saturn and Uranus.
 
 ## Known Bugs
 
@@ -58,7 +53,7 @@ _No known bugs at this time._
 
 ## Support and contact details
 
-_Have a bug or an issue with this application? [Open a new issue](https://github.com/kwicz/galactic-age-calculator/issues) here on GitHub._
+_Have a bug or an issue with this application? [Open a new issue](https://github.com/KeturahDev/react-merchent-store/issues) here on GitHub._
 
 ## Technologies Used
 
@@ -68,8 +63,6 @@ _Have a bug or an issue with this application? [Open a new issue](https://github
 * Javascript
 * HTML & CSS
 * Bootstrap 4
-* [Bootsnipp](https://bootsnipp.com/snippets/351Vo)
-* [Start Bootstrap](https://startbootstrap.com/snippets/pricing-table/)
 
 ### License
 
