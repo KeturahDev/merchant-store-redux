@@ -17,7 +17,12 @@ function Item(props) {
         <h4>{props.description}</h4>
         <p>Quantity: {props.quantity}</p>
         <div className="buttons">
+        { props.quantity <= 0 &&
+            <p>sorry, item is unailable for purchase</p>}
+        
+        { props.quantity > 0 &&
           <button onClick={() => buyItem(props.id)}>buy</button>
+        }
           <button onClick={() => restockItem(props.id)}>restock</button>
           <button>delete</button>
           {/* <p>buy---restock--delete</p> */}
