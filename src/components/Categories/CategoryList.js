@@ -12,7 +12,8 @@ function CategoryList(props){
         id={category.id} 
         itemsList={category.items} 
         deleteCategory={onDelete}
-        key={category.id}/>)}
+        key={category.id}/>
+      )}
     </React.Fragment>
   );
 }

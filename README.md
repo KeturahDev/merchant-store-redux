@@ -34,8 +34,8 @@ _In Terminal:_
 * Clone the file from GitHub with HTTPS
 ```git clone https://github.com/KeturahDev/react-merchent-store```
 * Open file in your preferred text editor
-* On Mac: ```open -a {your text editor} galactic-age-calculator```
-* On Windows: ```galactic-age-calculator```
+* On Mac: ```open -a {your text editor} react-merchent-store```
+* On Windows: ```react-merchent-store```
 
 _Download Manually:_
 

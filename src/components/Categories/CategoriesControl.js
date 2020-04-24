@@ -26,6 +26,7 @@ class CategoriesControl extends React.Component {
   }
 
   handleDeletingCategory = (id) => {
+    
     const newMasterCategoriesList = this.state.categories.filter(category => category.id !== id);
     this.setState({categories: newMasterCategoriesList})
   }
