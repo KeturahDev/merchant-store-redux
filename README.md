@@ -1,7 +1,11 @@
 
 # Best Merchant Store
-## By: Ketuah Howard, Hristo Dzhambov, Rachel || April 20th 2020
+## By: Ketuah Howard, Patrick Delaney, jeremy kale padot || April 27th 2020
 #### This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+Co-authored-by: jeremy kale padot <jeremy@padot.us>
+Co-authored-by: Patrick Delaney <prestwick97@gmail.com>
+
 
 ## Description 
 
