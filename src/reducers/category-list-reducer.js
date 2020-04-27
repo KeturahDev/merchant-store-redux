@@ -9,6 +9,10 @@ export default (state = {}, action) => {
           items: items
         }
       });
+    case 'REMOVE_CATEGORY':
+      const newState ={ ...state };
+      delete newState[id];
+      return newState;
     default:
       return state;
   }

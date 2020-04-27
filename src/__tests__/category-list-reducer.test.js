@@ -3,6 +3,7 @@ import categoryListReducer from "./../reducers/category-list-reducer";
 describe("categoryListReducer", () => {
 
   let action;
+
   const categoryData = {
     name: "shoes",
     id: 1,
@@ -14,10 +15,24 @@ describe("categoryListReducer", () => {
         id: 1
       }]
   };
+
+  const dummydata = {
+    1: {
+      name: "hats",
+      id:1,
+      items: []
+    },
+    2: {
+      name: "cats",
+      id: 2,
+      items: ["item1","item2"]
+    },
+  }
   
   test("Should return an empty state", () => {
     expect(categoryListReducer({}, {type: null})).toEqual({});
   })
+
   test("Should add a new category", () => {
     const {name, id, items} = categoryData;
     action = {
@@ -31,6 +46,21 @@ describe("categoryListReducer", () => {
         name: name,
         id: id,
         items: items
+      }
+    })
+    
+  })
+
+  test("should delete a category", ()=> {    
+    action = {
+      type: "REMOVE_CATEGORY",
+      id: 1
+    };
+    expect(categoryListReducer(dummydata, action)).toEqual({
+      2: {
+        name: "cats",
+        id: 2,
+        items: ["item1","item2"]
       }
     })
   })
