@@ -1,9 +1,7 @@
 import categoryListReducer from "./../reducers/category-list-reducer";
 
 describe("categoryListReducer", () => {
-
   let action;
-
   const categoryData = {
     name: "shoes",
     id: 1,
@@ -15,7 +13,6 @@ describe("categoryListReducer", () => {
         id: 1
       }]
   };
-
   const dummydata = {
     1: {
       name: "hats",
@@ -28,7 +25,7 @@ describe("categoryListReducer", () => {
       items: ["item1","item2"]
     },
   }
-  
+
   test("Should return an empty state", () => {
     expect(categoryListReducer({}, {type: null})).toEqual({});
   })
